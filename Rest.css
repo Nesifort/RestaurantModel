@@ -9,7 +9,7 @@
 }
 
 body {
-    background: lightgrey;
+    background-image: linear-gradient( rgb(194, 144, 7), white);
 }
 
 h1 {
@@ -29,53 +29,132 @@ li {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 img {
     max-width: 100%;
 }
 
+
 /***********************
     Header
 **********************/
 
-.logo {
-    margin: 10px 0;
+#header {
     text-align: center;
-    font-family: 'Bitter', serif;
+    padding: 3em 0 0 0;
+    background-color: #fff;
+    background-image: url("/Users/kevinnesifort/Documents/VS Files/Restuarant/Rest Images/Banner.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
+    #header h1 {
+        padding: 0 0 2.75em 0;
+        margin: 0;
+    }
 
-nav {
-    font-family: 'Bitter', serif;
-    text-align: center;
-    background: #86B555;
+        #header h1 a {
+            font-size: 1.5em;
+            letter-spacing: -0.025em;
+            border: 0;
+            color: #fff;
+        }
+
+
+#nav {
+    cursor: default;
+    background-color: #333;
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
+    background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
+    padding: 0;
 }
-nav li {
+
+#nav:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.75em;
+    background-color: #37c0fb;
+    background-image: url("images/bg01.png");
+}
+
+#nav > ul {
+    margin: 0;
+}
+
+#nav > ul > li {
+    position: relative;
     display: inline-block;
-    padding: 5px
+    margin-left: 1em;
 }
 
-nav a {
-    padding: 10px;
+#nav > ul > li a {
+    color: #c0c0c0;
+    text-decoration: none;
+    border: 0;
+    display: block;
+    padding: 1.5em 0.5em 1.35em 0.5em;
+}
+
+#nav > ul > li:first-child {
+    margin-left: 0;
+}
+
+#nav > ul > li:hover a {
     color: #fff;
 }
 
-nav a:hover {
-    color: #FFFC29;
-    opacity: 30%;
-    
+#nav > ul > li.current {
+    font-weight: 600;
 }
 
+#nav > ul > li.current:before {
+    -moz-transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+    width: 0.75em;
+    height: 0.75em;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -0.5em;
+    left: 50%;
+    margin-left: -0.375em;
+    background-color: #37c0fb;
+    background-image: url("images/bg01.png");
+}
+
+#nav > ul > li.current a {
+    color: #fff;
+}
+
+#nav > ul > li.active a {
+    color: #fff;
+}
+
+#nav > ul > li.active.current:before {
+    opacity: 0;
+}
+
+#nav > ul > li > ul {
+    display: none;
+}
 /************************
     Main Picture
 ************************/
 
-.title {
+.biograph{
     text-align: center;
-    padding: 10px;
-    color: ;
+    padding: 20px;
+    margin-top: 10px;
+    font: italic;
+    background: #fff;
+    border: solid 2px
 }
 
 .picture {
@@ -109,26 +188,46 @@ nav a:hover {
     border: 2px solid #000;
 }
 
+.map {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
 /********************
         Menu
 *********************/
 
-.menu li {
-    float: left;
-    width: 45%;
+.menu {
+    text-align: center;
+    
     margin: 1.5%;
+    /* border: 2px solid #000; */
+}
+
+.botonas {
     border: 2px solid #000;
+    background: #fff;
+}
+
+.menu h2
+
+#fullMenuButton {
+    margin-top: 100px;
+   
 }
 
 /********************
     Footer
 *********************/
 
-footer {
+.footer {
     text-align: center;
     font-size: 15px;
     clear: both;
-    padding: 10px
+    padding: 10px;
+    margin-top: -50px;
+    
 }
 
 /*******************
@@ -149,11 +248,12 @@ footer {
         float: right;
     }
 
-    nav {
+    .nav {
         background: none;
         float: right;
         text-align: right;
         width: 45%;
+        padding-top: 10px;
     }
     .logo {
         float: left;
@@ -161,4 +261,12 @@ footer {
         text-align: left;
         width: 45%;
     }
+    
+    .header {
+        background: #86B555;
+        border-bottom: 10px solid #000;
+    }
 
+    
+    
+    
